@@ -1,0 +1,11 @@
+digraph "Dominator tree for 'main' function" {
+	label="Dominator tree for 'main' function";
+
+	Node0x7fffd1929ad0 [shape=record,label="{%2:\l  %3 = alloca i32, align 4\l  %4 = alloca i32, align 4\l  %5 = call i32 (i8*, ...) @__isoc99_scanf(i8* getelementptr inbounds ([6 x\l... i8], [6 x i8]* @.str, i32 0, i32 0), i32* %3, i32* %4)\l  %6 = load i32, i32* %3, align 4\l  %7 = load i32, i32* %4, align 4\l  %8 = icmp sgt i32 %6, %7\l  br i1 %8, label %9, label %19\l}"];
+	Node0x7fffd1929ad0 -> Node0x7fffd1929b10;
+	Node0x7fffd1929ad0 -> Node0x7fffd1929b50;
+	Node0x7fffd1929ad0 -> Node0x7fffd1929b90;
+	Node0x7fffd1929b10 [shape=record,label="{%9:\l\l  %10 = load i32, i32* %3, align 4\l  %11 = load i32, i32* %4, align 4\l  %12 = add nsw i32 %10, %11\l  %13 = load i32, i32* %3, align 4\l  %14 = load i32, i32* %4, align 4\l  %15 = mul nsw i32 %13, %14\l  store i32 %15, i32* %3, align 4\l  %16 = load i32, i32* %3, align 4\l  %17 = load i32, i32* %4, align 4\l  %18 = mul nsw i32 %16, %17\l  store i32 %18, i32* %4, align 4\l  br label %29\l}"];
+	Node0x7fffd1929b50 [shape=record,label="{%29:\l\l  %.0 = phi i32 [ %12, %9 ], [ %22, %19 ]\l  %30 = load i32, i32* %3, align 4\l  %31 = load i32, i32* %4, align 4\l  %32 = mul nsw i32 %30, %31\l  store i32 %32, i32* %3, align 4\l  %33 = load i32, i32* %3, align 4\l  %34 = load i32, i32* %4, align 4\l  %35 = mul nsw i32 %33, %34\l  store i32 %35, i32* %4, align 4\l  store i32 5, i32* %3, align 4\l  store i32 5, i32* %4, align 4\l  store i32 1, i32* @global, align 4\l  ret i32 %.0\l}"];
+	Node0x7fffd1929b90 [shape=record,label="{%19:\l\l  %20 = load i32, i32* %3, align 4\l  %21 = load i32, i32* %4, align 4\l  %22 = sub nsw i32 %20, %21\l  %23 = load i32, i32* %3, align 4\l  %24 = load i32, i32* %4, align 4\l  %25 = mul nsw i32 %23, %24\l  store i32 %25, i32* %3, align 4\l  %26 = load i32, i32* %3, align 4\l  %27 = load i32, i32* %4, align 4\l  %28 = mul nsw i32 %26, %27\l  store i32 %28, i32* %4, align 4\l  br label %29\l}"];
+}

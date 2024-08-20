@@ -1,0 +1,11 @@
+digraph "Dominator tree for 'main' function" {
+	label="Dominator tree for 'main' function";
+
+	Node0x7fffea0d4ed0 [shape=record,label="{%2:\l  %3 = alloca [10 x i32], align 16\l  %4 = bitcast [10 x i32]* %3 to i8*\l  call void @llvm.memset.p0i8.i64(i8* %4, i8 0, i64 40, i32 16, i1 false)\l  br label %5\l}"];
+	Node0x7fffea0d4ed0 -> Node0x7fffea0d4f10;
+	Node0x7fffea0d4f10 [shape=record,label="{%5:\l\l  %.02 = phi i32 [ 0, %2 ], [ %11, %7 ]\l  %6 = icmp slt i32 %.02, 10\l  br i1 %6, label %7, label %12\l}"];
+	Node0x7fffea0d4f10 -> Node0x7fffea0d4f50;
+	Node0x7fffea0d4f10 -> Node0x7fffea0d4f90;
+	Node0x7fffea0d4f50 [shape=record,label="{%7:\l\l  %8 = sext i32 %.02 to i64\l  %9 = getelementptr inbounds [10 x i32], [10 x i32]* %3, i64 0, i64 %8\l  %10 = call i32 (i8*, ...) @__isoc99_scanf(i8* getelementptr inbounds ([3 x\l... i8], [3 x i8]* @.str, i32 0, i32 0), i32* %9)\l  %11 = add nsw i32 %.02, 1\l  br label %5\l}"];
+	Node0x7fffea0d4f90 [shape=record,label="{%12:\l\l  store i32 1, i32* @global, align 4\l  ret i32 1\l}"];
+}

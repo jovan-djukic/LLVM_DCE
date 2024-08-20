@@ -1,0 +1,11 @@
+digraph "Post dominator tree for 'test' function" {
+	label="Post dominator tree for 'test' function";
+
+	Node0x7fffe18be060 [shape=record,label="{%24:\l\l  store i32 5, i32* %0, align 4\l  store i32 5, i32* %3, align 4\l  store float 5.000000e+00, float* %4, align 4\l  store float 5.000000e+00, float* %5, align 4\l  store i32 1, i32* @global, align 4\l  ret i32 1\l}"];
+	Node0x7fffe18be060 -> Node0x7fffe1899a90;
+	Node0x7fffe18be060 -> Node0x7fffe18be0a0;
+	Node0x7fffe18be060 -> Node0x7fffe18be0e0;
+	Node0x7fffe1899a90 [shape=record,label="{%10:\l\l  %11 = load i32, i32* %0, align 4\l  %12 = load i32, i32* %3, align 4\l  %13 = add nsw i32 %11, %12\l  %14 = load float, float* %4, align 4\l  %15 = load float, float* %5, align 4\l  %16 = fmul float %14, %15\l  br label %24\l}"];
+	Node0x7fffe18be0a0 [shape=record,label="{%2:\l  %3 = alloca i32, align 4\l  %4 = alloca float, align 4\l  %5 = alloca float, align 4\l  store i32 %1, i32* %3, align 4\l  %6 = call i32 (i8*, ...) @__isoc99_scanf(i8* getelementptr inbounds ([12 x\l... i8], [12 x i8]* @.str, i32 0, i32 0), i32* %0, i32* %3, float* %4, float* %5)\l  %7 = load i32, i32* %0, align 4\l  %8 = load i32, i32* %3, align 4\l  %9 = icmp sgt i32 %7, %8\l  br i1 %9, label %10, label %17\l}"];
+	Node0x7fffe18be0e0 [shape=record,label="{%17:\l\l  %18 = load i32, i32* %0, align 4\l  %19 = load i32, i32* %3, align 4\l  %20 = sdiv i32 %18, %19\l  %21 = load float, float* %4, align 4\l  %22 = load float, float* %5, align 4\l  %23 = fsub float %21, %22\l  br label %24\l}"];
+}
